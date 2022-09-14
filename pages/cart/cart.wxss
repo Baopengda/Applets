@@ -1,0 +1,67 @@
+.goods_ {
+  background-color: white;
+  height: 238rpx;
+}
+.goods_center {
+  width: 100%;
+  height: 180rpx;
+  display: flex;
+  background-color: white;
+}
+.goods_center .goods_center_box {
+  width: 10%;
+  margin-left: 20rpx;
+  margin-top: 70rpx;
+}
+.goods_center .goodscart {
+  float: right;
+  width: 90%;
+  height: 180rpx;
+  background-color: #efefef;
+  white-space: nowrap;
+}
+.goods_center .goodscart .goodscart_infa {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0);
+  float: left;
+}
+.goods_center .goodscart .goodscart_infa .goodscart_infa_box {
+  display: flex;
+}
+.goods_center .goodscart .goodscart_infa .goodscart_infa_box image {
+  width: 200rpx;
+  height: 200rpx;
+}
+.goods_center .goodscart .goodscart_infa .goodscart_infa_box .goodscart_infa_box_right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 30rpx 0rpx;
+}
+.goods_center .goodscart .goodscart_text {
+  height: 100%;
+  width: 15%;
+  background-color: red;
+  display: inline-block;
+}
+.goods_center .goodscart .goodscart_text button {
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  text-align: center;
+  line-height: 190rpx;
+}
+.bujinqi {
+  background-color: white;
+  width: 23%;
+  float: right;
+}
+.van-submit-bar {
+  margin-bottom: 92rpx;
+}
+.bianji {
+  width: 20%;
+  display: inline-block;
+  background-color: #e91b1b;
+}

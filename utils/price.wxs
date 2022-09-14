@@ -1,0 +1,6 @@
+function RMBFormater(val){
+return "￥"+val.toFixed(2)+"元"
+}
+module.exports={
+  RMBFormater:RMBFormater
+}

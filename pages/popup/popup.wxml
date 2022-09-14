@@ -1,0 +1,15 @@
+<!-- 搜索框部分 -->
+<van-search
+  value="{{ value }}"
+  placeholder="请输入搜索关键词"
+  show-action
+  bind:search="onSearch"
+  bind:cancel="onCancel"
+  bind:change="onChange"
+/>
+
+
+<search-begin historyKeywordList='{{historyKeywordList}}' hotKeywordList='{{hotKeywordList}}' bindsendKeyword="clickKeyword" wx:if="{{active == 0}}"></search-begin>
+<search-click wx:elif="{{active == 1}}" bindsendKeyword='clickKeyword' datass="{{datass}}"></search-click>
+<search-enter datas='{{datas}}' filterCategory='{{filterCategory}}' goodsList='{{goodsList}}' wx:elif="{{active == 2}}"></search-enter>
+

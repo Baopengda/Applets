@@ -1,0 +1,9 @@
+product  产品
+goods 商品
+topic 专题，话题，主题
+Tips  提示
+
+cart 购物车，搬运
+category 分类
+popup 弹出层
+detail:详情

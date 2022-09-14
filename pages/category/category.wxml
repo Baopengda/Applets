@@ -1,0 +1,28 @@
+<!-- 该模块为分类栏目 -->
+<view class="centers">
+  <van-sidebar active-key="{{ activeKey }}" bind:change="onChange">
+  <van-sidebar-item title="{{item.name}}" wx:for="{{categoryList}}" wx:key="index" data-ids="{{item.id}}" bindtap="onhange"/>
+</van-sidebar>
+
+
+
+<!-- 右边部分 -->
+<view class="rightinfo">
+  <view class="rightinfo_box">
+    <image src="{{currentCategory.banner_url}}"></image>
+    <view class="rightinfo_text"><span>——</span>{{currentCategory.front_name}}<span>——</span></view>
+  </view>
+  <view class="rightinfo_center"><span>——</span>{{currentCategory.name}}<span>——</span></view>
+  <van-grid column-num="3" class="rightinfo_center_xh">
+    <van-grid-item icon="{{item.wap_banner_url}}" text="{{item.name}}" wx:for="{{subCategoryList}}" wx:key="index"/>
+  </van-grid>
+
+
+</view>
+
+
+
+</view>
+
+
+

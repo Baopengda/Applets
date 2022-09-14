@@ -1,0 +1,24 @@
+<!-- 当前页面为按下回车键后的页面 -->
+<van-dropdown-menu>
+  <van-dropdown-item title='综合' disabled="true" />
+  <van-dropdown-item value="{{ value1 }}" options="{{ option1 }}" title='价格' bindchange="valueChange"/>
+  <van-dropdown-item value="{{ value2 }}" options="{{ option2 }}" title='分类' bindchange="valueChange"/>
+</van-dropdown-menu>
+
+
+<view class="search_lists">
+  <!-- 该模板为常用模板 -->
+  <van-grid column-num="2" class="common_components">
+    <van-grid-item use-slot wx:for="{{ informations }}" class="">
+      <view class="common_components_box">
+        <image
+          class="common_components_image"
+          style="width: 100%; height: 90px;"
+          src="{{item.list_pic_url}}"
+        />
+        <view class="common_components_text1">{{item.name}}</view>
+        <view class="common_components_text2">￥ {{item.retail_price}} 元</view>       
+      </view>
+    </van-grid-item>
+  </van-grid>
+</view>

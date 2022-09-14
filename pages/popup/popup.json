@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "van-search": "@vant/weapp/search/index",
+    "search-begin":"/components/Searchbegin/Searchbegin",
+    "search-click":"/components/Searchclick/Searchclick",
+    "search-enter":"/components/SearchEnter/SearchEnter"
+  }
+}

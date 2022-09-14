@@ -1,0 +1,13 @@
+<!-- 该模块为专题模块 -->
+<view class="phones" wx:for="{{datas}}" wx:key="index">
+	<image class="phones_image" src="{{item.scene_pic_url}}"></image>
+	<view class="phones_text1">{{item.title}}</view>
+	<view class="phones_text2">{{item.subtitle}}</view>
+	<view class="phones_text3">￥ {{item.price_info}} 元起</view>
+</view>
+
+<!-- 下一页 -->
+<view class="nextpage">
+	<van-stepper class="nextpage_box" value="{{ 1 }}" bind:change="onChange" max="2"/>
+</view>
+<view class="centers"></view>

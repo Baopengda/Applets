@@ -1,0 +1,21 @@
+<!--components/Searchbegin/Searchbegin.wxml-->
+<view class="contents">
+	<view class="contents_top">
+		<view class="contents_top_text">历史记录</view>
+		<view>
+			<van-icon name="delete-o" />
+		</view>
+	</view>
+	<view class="contents_bottom">
+		<van-tag plain type="primary" wx:for="{{historyKeywordList}}" color="#969799" wx:key="index" bindtap='click' data-num="{{item}}">{{item}}</van-tag>
+	</view>
+</view>
+
+<view class="contents cont">
+	<view class="contents_top">
+		<view class="contents_top_text">热门搜索</view>
+	</view>
+	<view class="contents_bottom">
+		<van-tag plain  type="{{item.is_hot?'danger':'primary'}}" wx:for="{{hotKeywordList}}" wx:key="index" bindtap='clickl' data-num="{{item}}" color="{{item.is_hot==1?'darkred':'#666'}}">{{item.keyword}}</van-tag>
+	</view>
+</view>

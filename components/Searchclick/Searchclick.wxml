@@ -1,0 +1,6 @@
+<!-- 列表页面 -->
+<view class="lists">
+	<ul class="lists_ul">
+		<li class="lists_li" data-num='item' wx:for="{{datass}}" wx:key="index" bindtap="click">{{item}}</li>
+	</ul>
+</view>

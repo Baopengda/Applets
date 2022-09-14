@@ -1,0 +1,41 @@
+<view class="goods_" wx:for="{{cartList}}" wx:key="index">
+  <view class="goods_center">
+    <view class="goods_center_box">
+      <checkbox bindtap='click' data-che="{{item.checked}}" data-ids="{{item.product_id}}" checked="{{item.checked}}"></checkbox>
+    </view>
+    <scroll-view scroll-x="{{true}}" class="goodscart">
+      <view class="goodscart_infa">
+      <view class="goodscart_infa_box">
+        <image src="{{item.list_pic_url}}"></image>
+        <view class="goodscart_infa_box_right">
+          <view class="goodscart_text1">{{item.goods_name}}</view>
+          <view class="goodscart_text2">价格：{{item.market_price}}元</view>
+          <view class="goodscart_infa_box_price">数量：{{item.number}}</view>
+        </view>
+
+      </view>
+      </view>
+      <view class="goodscart_text"><button bindtap="delete" data-productIds
+="{{item.product_id}}">删除</button></view>
+    </scroll-view>
+  </view>
+  <view class="bujinqi">
+    <van-stepper value="{{item.number}}" data-productid="{{item.product_id}}" data-id="{{item.id}}" data-goods_id='{{item.goods_id}}' bind:change="onChange" />
+  </view>
+</view>
+
+
+
+
+
+<van-submit-bar
+  price="{{ cartTotal.checkedGoodsAmount *100 }}"
+  button-text="提交订单"
+  bind:submit="onClickButton"
+  tip="{{ true }}"
+>
+  <van-tag type="primary"><checkbox checked="{{checks}}"></checkbox></van-tag>
+  <view slot="tip">累计共0件商品,可点击 <button class="bianji"><view class="bian">编辑</view></button>按钮进行商品数量修改</view>
+</van-submit-bar>
+
+

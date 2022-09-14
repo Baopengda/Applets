@@ -1,0 +1,99 @@
+<!--pages/home/home.wxml-->
+<van-search disabled bindtap="onTap" placeholder="请输入搜索关键词"></van-search>
+<!-- 轮播图 -->
+<swiper indicator-dots="{{true}}"autoplay="{{true}}" circular="{{true}}">
+  <block wx:for="{{banner}}" wx:key="id">
+    <swiper-item>
+      <image src="{{item.image_url}}"></image>
+    </swiper-item>
+  </block>
+</swiper>
+<!-- 轮播图结束 -->
+
+<!-- 导航栏 -->
+<van-grid column-num="5" >
+  <van-grid-item wx:for="{{channel}}" wx:key="index"  icon="{{item.icon_url}}" text="{{item.name}}" url="{{item.url}}"/>
+</van-grid>
+
+
+<!-- 品牌制造商直供 -->
+<view class="brand">
+  <view class="brand_top">品牌制造商直供</view>
+  <van-grid column-num="2" class="brand_list">
+    <van-grid-item use-slot wx:for="{{ brandList }}" wx:key="index">
+      <image
+        style="width: 100%; height: 90px;"
+        src="{{item.pic_url}}"
+      />
+      <view class="brand_list_text1">{{item.name}}</view>
+      <view class="brand_list_text2">￥ {{item.floor_price}} 元</view>
+    </van-grid-item>
+  </van-grid>
+</view>
+
+
+<!-- 周四 -->
+<view class="brand">
+  <view class="brand_top">周一周四·新品首发</view>
+  <van-grid column-num="2" class="common_components">
+    <van-grid-item use-slot wx:for="{{ newGoodsList }}" class="">
+      <view class="common_components_box">
+        <image
+          class="common_components_image"
+          style="width: 100%; height: 90px;"
+          src="{{item.list_pic_url}}"
+        />
+        <view class="common_components_text1">{{item.name}}</view>
+        <view class="common_components_text2">￥ {{item.retail_price}} 元</view>       
+      </view>
+    </van-grid-item>
+  </van-grid>
+</view>
+
+
+<!-- 人气推荐 -->
+<view class="brand">
+  <view class="brand_top">人气推荐</view>
+  <van-card
+  wx:for="{{hotGoodsList}}"
+  price="{{item.retail_price}}"
+  desc="{{item.goods_brief}}"
+  title="{{item.name}}"
+  thumb="{{ item.list_pic_url }}"
+/>
+</view>
+
+<!-- 专题精选 -->
+<view class="brand">
+  <view class="brand_top">专题精选</view>
+  <swiper class="swiperss">
+    <swiper-item class="swiperss_cart" wx:for="{{topicList}}" wx:key="index">
+      <image src="{{item.scene_pic_url}}"></image>
+      <view class="swiperss_cart_text1">{{item.title}}</view>
+      <view class="swiperss_cart_text2">{{item.subtitle}}</view>
+    </swiper-item>
+  </swiper>
+</view>
+
+<!-- 专题中心 -->
+<view class="brand"  wx:for="{{ categoryList }}">
+  <view class="brand_top">{{item.name}}</view>
+  <van-grid column-num="2" class="common_components" >
+    <van-grid-item use-slot class="" wx:for="{{item.goodsList}}" wx:for-item="itemz">
+      <view class="common_components_box">
+        <image
+          class="common_components_image"
+          style="width: 100%; height: 90px;"
+          src="{{itemz.list_pic_url}}"
+        />
+        <view class="common_components_text1">{{itemz.name}}</view>
+        <view class="common_components_text2">￥ {{itemz.retail_price}} 元</view>
+      </view>
+    </van-grid-item>
+  </van-grid>
+</view>
+
+
+
+<view class="centers"></view>
+
